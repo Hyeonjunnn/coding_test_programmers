@@ -10,23 +10,29 @@ class Solution {
         
     // 왼쪽
     if(w != 0){
-        if(board[h][w-1].equals(board[h][w]) == true) {
+        if(board[h][w-1].equals(board[h][w])) {
             answer += 1;
         }
     }
 
     // 오른쪽
     if(w != (bsize - 1)){
-        if(board[h][w+1].equals(board[h][w])) {answer += 1;}
+        if(board[h][w+1].equals(board[h][w])) {
+            answer += 1;
+            }
     }
     // 위
     if(h != 0){
-        if(board[h-1][w].equals(board[h][w])){ answer += 1;}
+        if(board[h-1][w].equals(board[h][w])){
+            answer += 1;
+            }
     }
 
     // 아래
     if(h != (bsize - 1)){
-        if(board[h+1][w].equals(board[h][w])){ answer += 1;}
+        if(board[h+1][w].equals(board[h][w])){
+            answer += 1;
+            }
     }
         
     return answer;
